@@ -13,7 +13,9 @@ create table if not exists employee
 
 create table if not exists security_role
 (
-    id    bigserial primary key,
-    title varchar not null,
-    code  varchar not null
+    id      bigserial primary key,
+    created timestamp without time zone,
+    updated timestamp without time zone,
+    title   varchar not null,
+    code    varchar not null
 )

@@ -7,6 +7,7 @@ import two.nova.dashboard.entity.Employee;
 import two.nova.dashboard.repository.EmployeeRepository;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 @Service
 public class EmployeeService {
@@ -32,7 +33,7 @@ public class EmployeeService {
 
     private boolean existEmployeeByLogin(EmployeeDto dto){
         String login = String.valueOf(repositoryss.findByLogin(dto.getLogin()));
-        return login == null;
+        return Objects.equals(login, "null");
     }
 
 
